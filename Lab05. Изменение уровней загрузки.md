@@ -1,7 +1,7 @@
 ## Практическая работа 5. 
 ## Изменение уровней загрузки, выключение и перезагрузка системы
 
-> Соответствие LPI101: 1. Архитектура системы. 1.3 Изменение уровней загрузки, выключение и перезагрузка системы.(101.3 Change runlevels / boot targets and shutdown or reboot system
+> Соответствие LPI101: (101.3 Change runlevels / boot targets and shutdown or reboot system)
 
 ### Вопросы для самопроверки
 

@@ -1,9 +1,7 @@
 ## Практическая работа 22. 
-## Загрузка системы.
+## FHS, правила размещения файлов.
 
-
-# 4. Устройства, файловые системы, FHS
-## 4.6 FHS, правила размещения файлов (104.7 Find system files and place files in the correct location) 
+> Соответствие LPI101: (104.7 Find system files and place files in the correct location) 
 
 ### Вопросы для самопроверки
 
