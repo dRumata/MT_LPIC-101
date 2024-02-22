@@ -1,3 +1,7 @@
+## Практическая работа 22. 
+## Загрузка системы.
+
+
 # 4. Устройства, файловые системы, FHS
 ## 4.6 FHS, правила размещения файлов (104.7 Find system files and place files in the correct location) 
 
