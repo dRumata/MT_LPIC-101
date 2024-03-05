@@ -72,14 +72,16 @@
 
 1. Используя `rpm` в системе Red Hat Enterprise Linux, как установить пакет **VSCodium**, показывая индикатор хода установки? 
 
-1.1 Скачайте пакет по ссылке с помощью `wget` со страницы https://github.com/VSCodium/vscodium/releases
+1.1 Скачайте пакет по ссылке с помощью `wget` со страницы https://github.com/VSCodium/vscodium/releases (возможно версия пакета могла измениться)
 ```sh
 wget https://github.com/VSCodium/vscodium/releases/download/1.81.1.23222/codium-1.81.1.23222-el7.x86_64.rpm
 ```
+
 1.2 Используйте параметр -i для установки пакета и параметр -h для включения "хэш-знаков", показывающих ход установки. 
 ```sh
 rpm -ihv file-roller-3.28.1-2.el7.x86_64.rpm
 ```
+
 сравните с результатом:
 ```console
 Verifying...                          ################################# [100%]
@@ -95,6 +97,7 @@ Updating / installing...
 ```sh
 rpm -qf /etc/redhat-release
 ```
+
 сравните с результатом:
 ```console
 fedora-release-common-38-36.noarch
@@ -138,6 +141,7 @@ Downloading Packages:
 ```sh
 dnf list --installed
 ```
+
 4.2 Выберите все пакеты, содержащие в имени символы "cod"
 ```sh
 dnf list --installed|grep cod
@@ -160,8 +164,10 @@ iso-codes.noarch                                     4.13.0-1.fc38              
 ```sh
 yum whatprovides /bin/wget
 ```
+
 5.2 Повторите тоже самое для файла /etc/ssh/ssh_host_ecdsa_key.pub
 ```sh
 dnf whatprovides /etc/ssh/ssh_host_ecdsa_key.pub
 ```
+
 5.3 Уточните у инструктора/преподавателя почему файл есть, а связи с пакетом нет.

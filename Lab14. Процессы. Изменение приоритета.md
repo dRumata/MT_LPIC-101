@@ -78,14 +78,17 @@ F S UID PID PPID C PRI NI ADDR SZ WCHAN TTY TIME CMD
 ### Практические задания
 
 1. При попытке изменить процесс с помощью `renice` возникает ошибка:
+
 1.1 Создайте процесс
 ```sh
 tail -f .bash_history >newfile &
 ```
+
 1.2 Узнайте ID процесса для следующего шага
 ```sh
 pgrep tail
 ```
+
 1.3 Измените процесс
 ```sh
 renice -10 ID_из_шага_1.2
@@ -113,10 +116,12 @@ ps -el --sort=pcpu
 ```sh
 tail -f .bash_history >newfile &
 ```
+
 3.2 Узнайте ID процесса для следующего шага
 ```sh
 pgrep tail
 ```
+
 3.3 Отобразите параметры планирования процесса **ID_Шаг_3.2** 
 
 ```sh

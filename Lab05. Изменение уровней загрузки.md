@@ -69,7 +69,7 @@ sudo systemctl enable cups.service
 ```
 
 2.3. Проверьте статуc сервиса повторно. Должно изменится на:
-```
+```console
 ● cups.service - CUPS Scheduler
      Loaded: loaded (/usr/lib/systemd/system/cups.service; enabled; preset: disabled)
 ```
@@ -78,13 +78,15 @@ sudo systemctl enable cups.service
 3. Хотя файл **/sbin/init** можно найти в системах на базе **systemd**, он является лишь символической ссылкой на другой исполняемый файл. Узнеайте на какой файл указывает **/sbin/init**? 
    
 3.1. Используйте команду
-```
+```sh
 file /sbin/init
 ```
+
 3.2. Сравните с командой
-```
+```sh
 ls -l /sbin/init
 ```
+
 3.3. В обоих случаях вы должны увидеть указание на `../lib/systemd/systemd`
 
 ---
@@ -100,6 +102,7 @@ file /etc/systemd/system/default.target
 ```sh
 systemctl get-default
 ```
+
 4.3. Сравните результаты. Имена таргетов должны совпасть.
 Например:
 ```bash
@@ -116,6 +119,7 @@ graphical.target
 ```sh
 man shutdown
 ```
+
 5.2. Запланируйте перезагрузку на 22:30
 ```sh
 shutdown -r 22:30
@@ -129,6 +133,7 @@ shutdown --show
 [student@fedora ~]$ sudo shutdown --show
 Reboot scheduled for Fri 2023-08-25 22:30:00 MSK, use 'shutdown -c' to cancel.
 ```
+
 5.4. Отмените перезагрузку системы
 ```sh
 shutdown -c

@@ -58,7 +58,7 @@
 ### Практические задания
 1. Установите пакет ide-редактора VSCodium с помощью dpkg.
 
-1.1 Скачайте пакет по ссылке с помощью `wget` со страницы https://github.com/VSCodium/vscodium/releases
+1.1 Скачайте пакет по ссылке с помощью `wget` со страницы https://github.com/VSCodium/vscodium/releases (возможно версия могла измениться)
 ```sh
 wget https://github.com/VSCodium/vscodium/releases/download/1.81.1.23222/codium_1.81.1.23222_amd64.deb
 ```
@@ -77,6 +77,7 @@ dpkg -i codium_1.81.1.23222_amd64.deb
 ```sh
 apt-cache show gimp
 ```
+
 2.2 Найдите в полученой информации упоминание о верси пакета, сравните с результатом ниже в примере:
 ```sh
 Package: gimp
@@ -102,6 +103,7 @@ apt-file search /usr/bin/unrar
 ```sh
 apt install unrar-free
 ```
+
 3.4 Уточните версию утилиты 
 ```sh
 $ unrar-free -V
@@ -143,6 +145,7 @@ dpkg -r bzip2 file-roller
 ```sh
 dpkg-query -S 7zr.1.gz
 ```
+
 Убедитесь что ответ совпадает с примером ниже:
 ```sh
 p7zip: /usr/share/man/man1/7zr.1.gz

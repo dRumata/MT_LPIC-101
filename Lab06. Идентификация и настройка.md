@@ -55,25 +55,27 @@ lspci -s 0b:00.0 -k
 
 
 1.3. Определите mac-адрес сетевого интерфейса
-```
+```sh
 lspci -s 0b:00.0 -v
 ```
 информация должна содержать в строке `Capabilities:`
 
 1.4. Если информация не доступна: `Capabilities: <access denied>`, попробуйте повысить привелегии до root
-```
+```sh
 lspci -s 0b:00.0 -v
 ```
+
 Вы должны увидеть что-то подобное:
-```
+```console
         Capabilities: [100] Device Serial Number 00-50-56-ff-ff-bb-df-04
 ```
 1.5. Сравните свои данные о mac-адресе с информацией от команды 
-```
+```sh
 ip a
 ```
+
  Они должны совпадать:
- ```
+ ```console
  2: ens192: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
     link/ether 00:50:56:bb:df:04 brd ff:ff:ff:ff:ff:ff
  ```
