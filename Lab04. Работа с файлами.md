@@ -1,4 +1,4 @@
-## Практическая работа 22. 
+## Практическая работа 4. 
 ## FHS, правила размещения файлов.
 
 > Соответствие LPI101: (104.7 Find system files and place files in the correct location) 
