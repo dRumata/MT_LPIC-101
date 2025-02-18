@@ -74,12 +74,12 @@
 
 1.1 Скачайте пакет по ссылке с помощью `wget` со страницы https://github.com/VSCodium/vscodium/releases (возможно версия пакета могла измениться)
 ```sh
-wget https://github.com/VSCodium/vscodium/releases/download/1.81.1.23222/codium-1.81.1.23222-el7.x86_64.rpm
+wget https://github.com/VSCodium/vscodium/releases/download/1.97.2.25045/codium-1.97.2.25045-el9.x86_64.rpm
 ```
 
 1.2 Используйте параметр -i для установки пакета и параметр -h для включения "хэш-знаков", показывающих ход установки. 
 ```sh
-rpm -ihv file-roller-3.28.1-2.el7.x86_64.rpm
+rpm -ihv codium-1.97.2.25045-el9.x86_64.rpm
 ```
 
 сравните с результатом:
