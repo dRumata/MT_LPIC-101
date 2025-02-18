@@ -138,15 +138,19 @@ Downloading Packages:
 4. C помощью `dnf` получите список всех установленных в системе пакетов. 
 
     4.1. Используйте оператор `list`, за которым следует параметр `--installed`: 
-```sh
-dnf list --installed
-```
+
+    ```sh
+    dnf list --installed
+    ```
 
     4.2. Выберите все пакеты, содержащие в имени символы "cod"
-```sh
-dnf list --installed|grep cod
-```
+
+    ```sh
+    dnf list --installed|grep cod
+    ```
+
 Обратите внимание на пакет **codium**. Из какого репозитория он установле в отличии от других пакетов?
+
 ```sh
 adobe-source-code-pro-fonts.noarch                   2.042.1.062.1.026-2.fc38           @updates
 anthy-unicode.x86_64                                 1.0.0.20211224-9.fc38              @fedora
