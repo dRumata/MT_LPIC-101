@@ -163,7 +163,7 @@ sudo mkfs.xfs /dev/sdb1
 
 3. Отформатируете раздел **/dev/sdb2/** в файловой системе **ext4**.
 ```bash
-sudo mkfs.ext4 /dev/sdb2  -L LAB8_432
+sudo mkfs.ext4 /dev/sdb2  -L LAB162
 ```
 
 4. Проверьте информацию о разделе **sdb2** с помощью комманды `lsblk -f`. Что значит ключ `-L` использованный в предыдущем шаге?
@@ -174,9 +174,9 @@ sudo mkfs.ext4 /dev/sdb2  -L LAB8_432
 tune2fs -o acl,user_xattr /dev/sdb2
 ```
 
-6. Измените некоторые свойства **XFS** с помощью команды `xfs_admin`, установите для метки файловой системы значение **LAB43**.
+6. Измените некоторые свойства **XFS** с помощью команды `xfs_admin`, установите для метки файловой системы значение **LAB161**.
 ```bash
-xfs_admin -L LAB431 /dev/sdb1
+xfs_admin -L LAB161 /dev/sdb1
 ```
 
 7. Создание раздела подкачки. Используйте `gdisk`.
@@ -262,9 +262,9 @@ swapon /dev/sdb3
 13. Просмотрите информацию о разделах **/dev/sdb** с помощью комманды `lsblk -f`.
 
 
-14. Создайте два каталога **LAB43_sdb1** и **LAB43_sdb2** в `/mnt`
+14. Создайте два каталога **LAB16_sdb1** и **LAB16_sdb2** в `/mnt`
 ```bash
-mkdir /mnt/LAB43_sdb{1,2}
+mkdir /mnt/LAB16_sdb{1,2}
 ```
 
 15.  Просмотрите и добавьте информацию об **UUID** и **LABEL** для дисков **sdb1** и **sdb2** в файл `/etc/fstab`. Используйте комманды `blkid` и `tee`.
@@ -294,14 +294,14 @@ UUID=888e3dda-e00e-4211-99ca-d22a0e74f844 /boot                   xfs     defaul
 /dev/mapper/fedora-tmp /tmp                    xfs     defaults        0 0
 /dev/mapper/fedora-var /var                    xfs     defaults        0 0
 /dev/mapper/fedora-swap none                    swap    defaults        0 0
-/dev/sdb1: LABEL="LAB431" UUID="f6a6b244-ddb3-46b2-80d1-881c9ebc565d" BLOCK_SIZE="512" TYPE="xfs" PARTLABEL="Linux filesystem" PARTUUID="dcc854bc-dc33-48f6-9597-efe5eb4109a2"
-/dev/sdb2: LABEL="LAB8_432" UUID="2d1ebba0-ceb9-468b-b5dc-2a78330677d8" BLOCK_SIZE="4096" TYPE="ext4" PARTLABEL="Linux filesystem" PARTUUID="fdea8a67-a169-4518-a1f6-b46eba566d54"
+/dev/sdb1: LABEL="LAB161" UUID="f6a6b244-ddb3-46b2-80d1-881c9ebc565d" BLOCK_SIZE="512" TYPE="xfs" PARTLABEL="Linux filesystem" PARTUUID="dcc854bc-dc33-48f6-9597-efe5eb4109a2"
+/dev/sdb2: LABEL="LAB162" UUID="2d1ebba0-ceb9-468b-b5dc-2a78330677d8" BLOCK_SIZE="4096" TYPE="ext4" PARTLABEL="Linux filesystem" PARTUUID="fdea8a67-a169-4518-a1f6-b46eba566d54"
 ```
 
 16.  Исправьте последние две строки в файле `/etc/fstab` В резальтате вы получите примерный вид последних двух строк:
 ```console
-LABEL="LAB431" 				/mnt/LAB43_sdb1	xfs	defaults	0 0
-UUID=2d1ebba0-ceb9-468b-b5dc-2a78330677d8 	/mnt/LAB43_sdb2 	ext4	defaults	0 0
+LABEL="LAB161" 				/mnt/LAB16_sdb1	xfs	defaults	0 0
+UUID=2d1ebba0-ceb9-468b-b5dc-2a78330677d8 	/mnt/LAB16_sdb2 	ext4	defaults	0 0
 ```
 
 17.  Проверьте смонтированые диски в системе и их объем.
