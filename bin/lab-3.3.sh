@@ -1,9 +1,9 @@
-#/bin/bash
-dd if=/dev/zero of=/var/tmp/50.backup bs=1M count=5
-dd if=/dev/zero of=/var/tmp/105.backup bs=1M count=105
-dd if=/dev/zero of=/var/tmp/125.backup bs=1M count=125
-dd if=/dev/zero of=/var/tmp/145.backup bs=1M count=145
-dd if=/dev/zero of=/var/tmp/db-jan-2018.backup bs=1M count=5
-cp /var/tmp/db-jan-2018.backup /var/tmp/db-feb-2018.backup
-cp /var/tmp/db-jan-2018.backup /var/tmp/db-march-2018.backup
-cp /var/tmp/db-jan-2018.backup /var/tmp/db-apr-2018.backup
+#!/bin/bash
+for i in {3..5}; do
+    count=$((100 + i * 3))
+    dd if=/dev/zero of="/var/$(date +%d%m%y%H%M%S).$count.backup" bs=1M count="$count"
+done
+
+for m in jan feb march apr; do
+    man gpg > "/var/db-$m-2018.backup"
+done
